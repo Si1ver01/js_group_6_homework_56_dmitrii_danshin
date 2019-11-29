@@ -26,7 +26,6 @@ const Header = props => {
         value={props.moneyItem.price}
       />
       <Select
-        label="Category:"
         options={CATEGORY}
         handler={event => props.inputHandler(event,'category')}
       />
