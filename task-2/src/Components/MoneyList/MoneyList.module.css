@@ -19,7 +19,6 @@
 .MoneyList td:first-child {
   background: #AFCDE7;
   color: white;
-  padding: 10px 20px;
 }
 
 .MoneyList th,
@@ -31,6 +30,7 @@
 
 .MoneyList td {
   background: #D8E6F3;
+  padding: 0;
 }
 
 .MoneyList th:first-child,
@@ -41,5 +41,4 @@
 .MoneyList td:last-child,
 .MoneyList th:last-child{
   width: 20%;
-  padding: 0;
 }
