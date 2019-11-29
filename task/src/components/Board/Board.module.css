@@ -1,0 +1,8 @@
+.Board{
+  width: 302px;
+  height: 302px;
+  display: flex;
+  flex-wrap: wrap;
+  border:1px solid greenyellow;
+  margin: 0 auto;
+}

@@ -1,0 +1,26 @@
+.LinerDiagram{
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #ff7043;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0 5px;
+  margin-top: 5px;
+  
+}
+
+.Diagram{
+  height: 25px;
+  border:2px solid #7b1fa2;
+  width: 100%;  
+  display: flex; 
+  background-color: #d0d6e2;
+  border-radius: 5px;
+
+}
+
+.DiagramItems{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+}

@@ -1,0 +1,8 @@
+.CounterClicker{
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.CounterClicker span {
+  font-weight: bold;
+}

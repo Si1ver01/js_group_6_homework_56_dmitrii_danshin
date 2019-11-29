@@ -1,0 +1,17 @@
+.ListItem{
+  
+}
+
+
+.ListItem  div{
+  flex-grow: 0;
+  width: 100%;  
+  min-height: 100%;
+  border-radius: 5px;
+}
+
+.ListItem button{
+  padding: 3px 0;
+  width: 100%;
+  height: 100%;
+}

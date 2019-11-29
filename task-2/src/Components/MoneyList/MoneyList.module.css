@@ -1,0 +1,45 @@
+.MoneyList {
+  border-radius: 5px;
+  margin: 5px;
+  flex-grow: 1;
+  text-align: center;
+  border : 2px solid #ff7043;
+  padding: 5px 10px;
+}
+
+.MoneyList table {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 14px;
+  border-collapse: collapse;
+  text-align: center;
+  width: 100%;
+}
+
+.MoneyList th,
+.MoneyList td:first-child {
+  background: #AFCDE7;
+  color: white;
+  padding: 10px 20px;
+}
+
+.MoneyList th,
+.MoneyList td {
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  border-color: white;
+}
+
+.MoneyList td {
+  background: #D8E6F3;
+}
+
+.MoneyList th:first-child,
+.MoneyList td:first-child {
+  text-align: left;
+}
+
+.MoneyList td:last-child,
+.MoneyList th:last-child{
+  width: 20%;
+  padding: 0;
+}
