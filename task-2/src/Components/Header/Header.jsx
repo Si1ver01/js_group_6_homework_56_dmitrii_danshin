@@ -30,7 +30,6 @@ const Header = props => {
         options={CATEGORY}
         handler={event => props.inputHandler(event,'category')}
       />
-      {/* <Button handler={(event) => props.addItem(event)} type='submit'>Save</Button> */}
       <Button type='submit'>Save</Button>
 
       </form>

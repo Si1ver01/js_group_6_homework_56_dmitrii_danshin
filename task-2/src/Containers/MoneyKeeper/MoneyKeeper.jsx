@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import Header from "../../Components/Header/Header.jsx";
-import MoneyList from '../../Components/MoneyList/MoneyList.jsx'
+import MoneyList from "../../Components/MoneyList/MoneyList.jsx";
 import classes from "./MoneyKeeper.module.css";
-import TotalMoney from '../../Components/TotalMoney/TotalMoney.jsx';
-import LinerDiagram from '../../Components/LinerDiagram/LinerDiagram.jsx';
+import TotalMoney from "../../Components/TotalMoney/TotalMoney.jsx";
+import LinerDiagram from "../../Components/LinerDiagram/LinerDiagram.jsx";
 
-function templateMoneyItem(cat='Entertaiment'){
+function templateMoneyItem(cat = "Entertaiment") {
   return {
     name: "",
-    price: '',
+    price: "",
     category: cat
-  }
+  };
 }
 
 export default class MoneyKeeper extends Component {
@@ -21,38 +21,42 @@ export default class MoneyKeeper extends Component {
 
   inputHandler = (event, name) => {
     const moneyItem = { ...this.state.moneyItem };
-    moneyItem[name] = event.target.value;
+    if (name === "price" && event.target.value !== "") {
+      moneyItem[name] = Math.abs(event.target.value);
+    } else {
+      moneyItem[name] = event.target.value;
+    }
     this.setState({ moneyItem });
   };
 
   addItem = event => {
     event.preventDefault();
-    const moneyList = [...this.state.moneyList]
+    const moneyList = [...this.state.moneyList];
     moneyList.push(this.state.moneyItem);
     this.setState({
       moneyList,
-      moneyItem : templateMoneyItem(this.state.moneyItem.category)
-    })
-  }
+      moneyItem: templateMoneyItem(this.state.moneyItem.category)
+    });
+  };
 
   deleteItem = index => {
     const moneyList = [...this.state.moneyList];
-    moneyList.splice(index,1);
-    this.setState({moneyList});
-  }
+    moneyList.splice(index, 1);
+    this.setState({ moneyList });
+  };
 
   render() {
     return (
       <div className={classes.MoneyKeeper}>
         <Header
-          moneyItem = {this.state.moneyItem}
+          moneyItem={this.state.moneyItem}
           inputHandler={this.inputHandler}
           selectHandler={this.selectHandler}
-          addItem = {(event) => this.addItem(event)}
+          addItem={event => this.addItem(event)}
         />
-        <MoneyList list={this.state.moneyList} deleteItem={this.deleteItem}/>
-        <TotalMoney list={this.state.moneyList}/>
-        <LinerDiagram list={this.state.moneyList}/>
+        <MoneyList list={this.state.moneyList} deleteItem={this.deleteItem} />
+        <TotalMoney list={this.state.moneyList} />
+        <LinerDiagram list={this.state.moneyList} />
       </div>
     );
   }
